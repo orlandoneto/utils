@@ -7,4 +7,6 @@ password: Yup.string()
   'Deve conter 8 caracteres, uma maiúscula, uma minúscula, um número e um caractere especial.'
 ),
 
+  // Arredodamento preciso de casas decimais
+  Math.floor(7682.145908110258 * 100) / 100; //saída: 7682.14. OBS: toFixed arredonda para mais.
 
