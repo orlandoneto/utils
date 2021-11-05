@@ -10,3 +10,10 @@ password: Yup.string()
   // Arredodamento preciso de casas decimais
   Math.floor(7682.145908110258 * 100) / 100; //saída: 7682.14. OBS: toFixed arredonda para mais.
 
+// Função de capitalize
+capitalize: str => {
+  if (str === undefined) return '';
+  return str.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+},
