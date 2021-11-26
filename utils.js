@@ -36,3 +36,15 @@ return value.length === 11
       .replace(/(-\d{2})\d+?$/, '$1');
 },
 };
+
+// Função que checa se o objeto é vazio ou se todos os atribusto são vazio.
+  isObjectEmpty: object => {
+    if (JSON.stringify(object) === '{}') {
+      return false;
+    }
+
+    for (const key in object) {
+      if (object[key] !== null && object[key] != '') return false;
+    }
+    return true;
+  },
